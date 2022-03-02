@@ -7,4 +7,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "A Service"
-include ':app'
+include(":app")
+include(":feature-main")
+include(":feature-sign")
+include(":feature-admin")
+include(":feature-owner")
+include(":common")
