@@ -71,7 +71,6 @@ dependencies {
     implementation(Dependencies.Android.LifeCycle.lifeCycleRuntime)
     // Hilt
     implementation(Dependencies.Android.Hilt.daggerHiltAndroid)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
     kapt(Dependencies.Android.Hilt.daggerHiltCompiler)
     //Hilt Navigation
     implementation(Dependencies.Android.Hilt.hiltNavigationFragment)
