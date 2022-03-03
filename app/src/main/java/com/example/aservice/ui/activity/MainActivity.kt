@@ -5,8 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.example.aservice.R
 import com.bacon.common.data.local.preferences.PreferencesHelper
+import com.example.aservice.R
 import com.example.aservice.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -29,22 +29,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container_app) as NavHostFragment
         navController = navHostFragment.navController
 
-        val mainGraph = navController.navInflater.inflate(R.navigation.main_graph)
-        val signGraph = navController.navInflater.inflate(R.navigation.sign_graph)
-
+        val navGraph = navController.navInflater.inflate(R.navigation.nav_application)
         if (preferences.isAuthorized) {
-            navController.graph = mainGraph
+            navGraph.setStartDestination(R.id.mainFlowFragment)
         } else {
-            navController.graph = signGraph
+            navGraph.setStartDestination(R.id.authFlowFragment)
         }
-//        when {
-//            preferences.isAuthorized -> {
-//                navGraph.setStartDestination(R.id.mainFlowFragment)
-//            }
-//            !preferences.isAuthorized -> {
-//                navGraph.setStartDestination(R.id.authFlowFragment)
-//            }
-//        }
-//        navController.graph = navGraph
+        navController.graph = navGraph
     }
 }
