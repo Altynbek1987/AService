@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_application"
-    tools:ignore="InvalidNavigation"
-    >
+    tools:ignore="InvalidNavigation">
 
 
     <fragment
@@ -16,10 +14,6 @@
         android:id="@+id/mainFlowFragment"
         android:name="com.bacon.feature_main.presentation.ui.MainFlowFragment"
         android:label="MainFlowFragment"
-        tools:layout="@layout/fragment_main_flow" >
+        tools:layout="@layout/fragment_main_flow" />
 
-    </fragment>
-
-    <include app:graph="@navigation/main_graph" />
-    <include app:graph="@navigation/sign_graph" />
 </navigation>
