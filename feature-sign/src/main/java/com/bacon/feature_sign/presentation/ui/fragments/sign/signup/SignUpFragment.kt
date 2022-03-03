@@ -5,6 +5,7 @@ import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.bacon.common.base.BaseFragment
 import com.bacon.common.data.local.preferences.PreferencesHelper
+import com.bacon.common.extensions.navigateSafely
 import com.bacon.common.extensions.setOnSingleClickListener
 import com.bacon.feature_sign.R
 import com.bacon.feature_sign.databinding.FragmentSignUpBinding
@@ -29,6 +30,7 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding, SignViewModel>(
     private fun clickSignIn() {
         binding.buttonSignIn.setOnSingleClickListener {
             preferences.isAuthorized = true
+            findNavController().navigateSafely(R.id.action_signUpFragment_to_mainFlowFragment)
         }
     }
 
