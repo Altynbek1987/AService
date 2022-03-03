@@ -13,10 +13,19 @@
         <action
             android:id="@+id/action_signUpFragment_to_signInFragment"
             app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_mainFlowFragment"
+            app:popUpTo="@id/sign_graph"
+            app:destination="@id/mainFlowFragment" />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
         android:name="com.bacon.feature_sign.presentation.ui.fragments.sign.signin.SignInFragment"
         android:label="fragment_sign_in"
         tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        tools:layout="@layout/fragment_main_flow"
+        android:name="com.bacon.feature_main.presentation.ui.MainFlowFragment"
+        android:label="MainFlowFragment" />
 </navigation>
