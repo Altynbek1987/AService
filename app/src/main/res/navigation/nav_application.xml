@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_application"
+    tools:ignore="InvalidNavigation">
+
+
+    <fragment
+        android:id="@+id/authFlowFragment"
+        android:name="com.bacon.feature_sign.presentation.ui.fragments.AuthFlowFragment"
+        android:label="AuthFlowFragment"
+        tools:layout="@layout/fragment_auth_flow" />
+    <fragment
+        android:id="@+id/mainFlowFragment"
+        android:name="com.bacon.feature_main.presentation.ui.MainFlowFragment"
+        android:label="MainFlowFragment"
+        tools:layout="@layout/fragment_main_flow" />
+
+</navigation>
