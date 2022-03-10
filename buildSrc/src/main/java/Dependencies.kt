@@ -6,6 +6,7 @@ object Dependencies {
         const val navigationSafeArgsPlugin =
             "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.1"
         const val hiltAndroidGradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:2.40.5"
+        const val googleService = "com.google.gms:google-services:4.3.10"
     }
 
     object Android {
@@ -20,6 +21,29 @@ object Dependencies {
             const val viewBindingPropertyDelegate =
                 "com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.5.3"
             const val coil = "io.coil-kt:coil:1.4.0"
+        }
+
+        object Firebase {
+            const val firebaseAuth = "com.google.firebase:firebase-auth:21.0.1"
+            const val firebaseAuthKtx = "com.google.firebase:firebase-auth-ktx"
+
+            // FireStore
+            const val firebaseFirestore = "com.google.firebase:firebase-firestore-ktx:23.0.3"
+
+            // FireStoreUI
+            const val firebaseUIForCloudFirestore = "com.firebaseui:firebase-ui-firestore:8.0.0"
+
+            // Coroutines with fireStore
+            const val coroutinesWithFirebase =
+                "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.3.9"
+            const val firebaseLifeCycle = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1"
+            const val firebaseLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1"
+
+            // FirebaseBom
+            const val fireBaseBom = "com.google.firebase:firebase-bom:28.4.0"
+
+            // FirebasePlayStoreService
+            const val fireBasePlayStore = "com.google.android.gms:play-services-auth:19.2.0"
         }
 
         object Hilt {

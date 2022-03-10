@@ -10,6 +10,9 @@ plugins {
     // Hilt
     id("dagger.hilt.android.plugin")
 
+    // Google Services
+    id("com.google.gms.google-services")
+
 }
 
 
@@ -52,46 +55,76 @@ dependencies {
     implementation(project(":feature-sign"))
     implementation(project(":feature-main"))
     implementation(project(":common"))
+
     // Kotlin
     // | Coroutines
     implementation(Dependencies.Android.Kotlin.kotlinCoroutinesAndroid)
+
     //Core
     implementation(Dependencies.Android.coreKtx)
+
     //AppCompat
     implementation(Dependencies.Android.appCompat)
+
     //Material Design
     implementation(Dependencies.Android.UIComponent.materialIO)
+
     //UI Component
     implementation(Dependencies.Android.UIComponent.constraint)
+
     // Activity
     implementation(Dependencies.Android.activityAndroid)
+
     // Fragment
     implementation(Dependencies.Android.fragmentAndroid)
+
     // Navigation
     implementation(Dependencies.Android.navigationFragment)
     implementation(Dependencies.Android.navigationUI)
+
     // | for ViewModel
     implementation(Dependencies.Android.LifeCycle.lifeCycleViewModelKtx)
+
     // | for LiveData
     implementation(Dependencies.Android.LifeCycle.lifeCycleLiveData)
+
     // Lifecycles only (without ViewModel or LiveData)
     implementation(Dependencies.Android.LifeCycle.lifeCycleRuntime)
+
     // Hilt
     implementation(Dependencies.Android.Hilt.daggerHiltAndroid)
+    implementation("com.google.firebase:firebase-auth-ktx:21.0.1")
+    implementation("com.google.firebase:firebase-firestore-ktx:24.0.1")
+    implementation("com.google.firebase:firebase-storage-ktx:20.0.0")
     kapt(Dependencies.Android.Hilt.daggerHiltCompiler)
+
     //Hilt Navigation
     implementation(Dependencies.Android.Hilt.hiltNavigationFragment)
+
     // ViewBindingPropertyDelegate
     // | kirich1409 | To use only without reflection variants of viewBinding
     implementation(Dependencies.Android.UIComponent.viewBindingPropertyDelegate)
+
     // Coil
     implementation(Dependencies.Android.UIComponent.coil)
 
-    // Coroutines with fireStore
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.0")
+    //FirebaseAuth
+    implementation(Dependencies.Android.Firebase.firebaseAuth)
+    implementation(Dependencies.Android.Firebase.firebaseAuthKtx)
 
-    implementation("com.google.firebase:firebase-firestore-ktx:24.0.1")
-    implementation("androidx.core:core-ktx:1.7.0")
+    //Firestore
+    implementation(Dependencies.Android.Firebase.firebaseFirestore)
+    //fs-ui
+    implementation(Dependencies.Android.Firebase.firebaseUIForCloudFirestore)
+    //fs-coroutines
+    implementation(Dependencies.Android.Firebase.coroutinesWithFirebase)
+    implementation(Dependencies.Android.Firebase.firebaseLifeCycle)
+    implementation(Dependencies.Android.Firebase.firebaseLiveData)
 
+    // FirebaseBom
+    implementation(Dependencies.Android.Firebase.fireBaseBom)
+
+    // FirebasePlayStore
+    implementation(Dependencies.Android.Firebase.fireBasePlayStore)
 
 }
